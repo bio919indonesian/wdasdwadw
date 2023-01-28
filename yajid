@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func biner(a int) string {
+	var b string
+	b = " "
+	for a > 0 {
+		if a%2 == 0 {
+			b = "0" + b
+		} else {
+			b = "1" + b
+		}
+		a = a / 2
+	}
+	return b
+}
+
+func main() {
+	var c int
+	fmt.Scan(&c)
+	fmt.Println(biner(c))
+}
